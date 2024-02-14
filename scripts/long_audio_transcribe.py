@@ -28,6 +28,13 @@ if __name__ == "__main__":
         lang2token = {
             'zh': "[ZH]",
         }
+    elif args.languages == "CJKE":
+        lang2token = {
+            'zh': "[ZH]",
+            'ja': "[JA]",
+            "en": "[EN]",
+	"ko": "[KO]",
+        }
     assert(torch.cuda.is_available()), "Please enable GPU in order to run Whisper!"
     with open("./configs/finetune_speaker.json", 'r', encoding='utf-8') as f:
         hps = json.load(f)
